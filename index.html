@@ -1,0 +1,265 @@
+<!--
+  PrimeWeb Studios — Site estático
+  Arquivo: index.html
+  Tecnologias: HTML5 semântico
+  Comentários: Este arquivo contém a estrutura principal, seções, modais e links.
+  Instruções rápidas:
+  - Trocar número do WhatsApp: veja data-whatsapp no botão/links e app.js (const WHATSAPP_NUMBER).
+  - Trocar mensagem padrão do WhatsApp: app.js (const WHATSAPP_MESSAGE_BASE).
+  - Trocar coordenadas do Google Maps: iframe na seção "Local do Desenvolvedor" (atributo src com lat,lng).
+  - Substituir textos e preços: editar conteúdo das seções diretamente neste HTML.
+  - Hospedar: você pode usar GitHub Pages (coloque estes três arquivos em um repositório e ative Pages), Netlify ou Vercel.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrimeWeb Studios — Criação de Sites Profissionais</title>
+  <meta name="description" content="PrimeWeb Studios: agência especializada em sites modernos, responsivos e com SEO. Conheça nossos planos Essencial, Profissional e Premium." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para conteúdo</a>
+
+  <header class="site-header" role="banner" aria-label="Cabeçalho">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Logo">
+        <!-- Salve a imagem enviada como logo.png na raiz do projeto -->
+        <img src="logo.png" alt="Logo PrimeWeb Studios" class="logo-img" loading="lazy" />
+        <span class="logo-text">PrimeWeb <span>Studios</span></span>
+      </a>
+      <nav class="main-nav" id="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#planos" class="nav-link">Planos</a></li>
+          <li><a href="#modelos" class="nav-link">Modelos</a></li>
+          <li><a href="#local" class="nav-link">Local do Desenvolvedor</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero" aria-label="Seção hero">
+      <canvas id="heroParticles" aria-hidden="true"></canvas>
+      <div class="container hero-inner reveal">
+        <h1 class="hero-title">Seu site profissional, moderno e feito sob medida</h1>
+        <p class="hero-subtitle">A PrimeWeb Studios cria experiências digitais que elevam a sua marca.</p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary btn-lg">Quero criar meu site</a>
+          <a href="#planos" class="btn btn-outline btn-lg">Ver planos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="section" aria-labelledby="planos-title">
+      <div class="container">
+        <h2 id="planos-title">Planos</h2>
+        <p class="section-lead">Todos os sites têm design exclusivo, são responsivos (celular e computador) e feitos sob medida pro seu negócio.</p>
+        <div class="cards">
+          <article class="card plan-card reveal" aria-label="Plano Essencial">
+            <div class="card-header">Plano Essencial</div>
+            <div class="card-price">R$ 1.500</div>
+            <ul class="card-features">
+              <li>Site moderno de 3 páginas</li>
+              <li>Integração com WhatsApp e Instagram</li>
+              <li>Hospedagem por 3 anos</li>
+              <li>Entrega em até 5 dias</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+          </article>
+
+          <article class="card plan-card highlight reveal" aria-label="Plano Profissional">
+            <div class="card-header">🚀 Plano Profissional</div>
+            <div class="card-price">R$ 2.000</div>
+            <ul class="card-features">
+              <li>Site completo com até 5 páginas</li>
+              <li>Google Maps embutido</li>
+              <li>SEO básico</li>
+              <li>Domínio + hospedagem por 3 anos</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+          </article>
+
+          <article class="card plan-card reveal" aria-label="Plano Premium">
+            <div class="card-header">🌟 Plano Premium</div>
+            <div class="card-price">R$ 3.000</div>
+            <ul class="card-features">
+              <li>Site personalizado com até 10 páginas</li>
+              <li>Blog ou loja básica</li>
+              <li>SEO avançado</li>
+              <li>Suporte por 1 ano</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modelos -->
+    <section id="modelos" class="section" aria-labelledby="modelos-title">
+      <div class="container">
+        <h2 id="modelos-title">Modelos</h2>
+        <div class="templates-grid">
+          <!-- 6 modelos com mini-preview -->
+          <article class="template-card reveal">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='%230c183d'/><text x='50%' y='50%' fill='%237AEAFF' font-size='24' font-family='Arial' dominant-baseline='middle' text-anchor='middle'>Modelo%201</text></svg>" alt="Mini preview do Modelo 1" />
+            <div class="template-info">
+              <h3>Modelo 1 — Start</h3>
+              <p>Layout clean para empresas iniciantes.</p>
+              <button class="btn btn-outline open-template" data-template="1">Ver modelo</button>
+            </div>
+          </article>
+          <article class="template-card reveal">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='%230c183d'/><text x='50%' y='50%' fill='%237AEAFF' font-size='24' font-family='Arial' dominant-baseline='middle' text-anchor='middle'>Modelo%202</text></svg>" alt="Mini preview do Modelo 2" />
+            <div class="template-info">
+              <h3>Modelo 2 — Pro</h3>
+              <p>Seções ricas para serviços variados.</p>
+              <button class="btn btn-outline open-template" data-template="2">Ver modelo</button>
+            </div>
+          </article>
+          <article class="template-card reveal">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='%230c183d'/><text x='50%' y='50%' fill='%237AEAFF' font-size='24' font-family='Arial' dominant-baseline='middle' text-anchor='middle'>Modelo%203</text></svg>" alt="Mini preview do Modelo 3" />
+            <div class="template-info">
+              <h3>Modelo 3 — Corporate</h3>
+              <p>Ideal para empresas com múltiplos departamentos.</p>
+              <button class="btn btn-outline open-template" data-template="3">Ver modelo</button>
+            </div>
+          </article>
+          <article class="template-card reveal">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='%230c183d'/><text x='50%' y='50%' fill='%237AEAFF' font-size='24' font-family='Arial' dominant-baseline='middle' text-anchor='middle'>Modelo%204</text></svg>" alt="Mini preview do Modelo 4" />
+            <div class="template-info">
+              <h3>Modelo 4 — Creative</h3>
+              <p>Visual ousado para marcas criativas.</p>
+              <button class="btn btn-outline open-template" data-template="4">Ver modelo</button>
+            </div>
+          </article>
+          <article class="template-card reveal">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='%230c183d'/><text x='50%' y='50%' fill='%237AEAFF' font-size='24' font-family='Arial' dominant-baseline='middle' text-anchor='middle'>Modelo%205</text></svg>" alt="Mini preview do Modelo 5" />
+            <div class="template-info">
+              <h3>Modelo 5 — Retail</h3>
+              <p>Estrutura para mostrar produtos e ofertas.</p>
+              <button class="btn btn-outline open-template" data-template="5">Ver modelo</button>
+            </div>
+          </article>
+          <article class="template-card reveal">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='%230c183d'/><text x='50%' y='50%' fill='%237AEAFF' font-size='24' font-family='Arial' dominant-baseline='middle' text-anchor='middle'>Modelo%206</text></svg>" alt="Mini preview do Modelo 6" />
+            <div class="template-info">
+              <h3>Modelo 6 — Portfolio</h3>
+              <p>Perfeito para mostrar trabalhos e cases.</p>
+              <button class="btn btn-outline open-template" data-template="6">Ver modelo</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local do Desenvolvedor -->
+    <section id="local" class="section" aria-labelledby="local-title">
+      <div class="container">
+        <h2 id="local-title">Local do Desenvolvedor</h2>
+        <div class="local-wrapper">
+          <div class="local-map" aria-label="Mapa do local">
+            <!-- Substitua as coordenadas abaixo por suas próprias (lat,lng) -->
+            <iframe title="Mapa do desenvolvedor" src="https://www.google.com/maps?q=-23.55052,-46.633308&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="local-info">
+            <p><strong>Endereço:</strong> Av Duque de Caxias 000 Jaguarão/RS</p>
+            <p><strong>Atendimento:</strong> Seg a Sex, 8h às 20h</p>
+            <div class="quick-links">
+              <a id="whatsLink" class="btn btn-primary" href="#" data-whatsapp="5553999666606" rel="noopener">WhatsApp</a>
+              <a class="btn btn-outline" href="https://instagram.com/primewebstudios" target="_blank" rel="noopener">Instagram</a>
+              <a class="btn btn-outline" href="https://mail.google.com/mail/?view=cm&fs=1&to=pfbiel36@gmail.com" target="_blank" rel="noopener" aria-label="Abrir Gmail">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 id="contato-title">Contato</h2>
+        <form id="contactForm" class="contact-form" aria-describedby="form-help">
+          <div id="form-help" class="sr-only">Preencha os campos obrigatórios e envie sua mensagem.</div>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="servico">Serviço desejado</label>
+            <select id="servico" name="servico" required>
+              <option value="">Selecione uma opção</option>
+              <option>Criação de Site</option>
+              <option>SEO</option>
+              <option>Loja Virtual</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos mais sobre seu projeto" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Quero criar meu site</button>
+          </div>
+          <div class="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" aria-label="Rodapé">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> PrimeWeb Studios. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#planos">Planos</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="socials">
+        <a href="https://instagram.com/primewebstudios_" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="#" id="footerWhats" data-whatsapp="5553999666606" aria-label="WhatsApp">WhatsApp</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pfbiel36@gmail.com" target="_blank" rel="noopener" aria-label="Abrir Gmail">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal genérico reutilizável -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal tabindex="-1" aria-hidden="true"></div>
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Fechar" data-close-modal>&times;</button>
+      <h3 id="modal-title">Título do Modal</h3>
+      <div class="modal-body">
+        <!-- Conteúdo injetado via JavaScript -->
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="modal-cta" hidden>Quero este modelo</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+  <!-- Favicon baseado na logo -->
+  <link rel="icon" href="logo.png" type="image/png" />
