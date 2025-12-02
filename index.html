@@ -1,0 +1,290 @@
+<!--
+  PrimeWeb Studios — Site estático
+  Arquivo: index.html
+  Tecnologias: HTML5 semântico
+  Comentários: Este arquivo contém a estrutura principal, seções, modais e links.
+  Instruções rápidas:
+  - Trocar número do WhatsApp: veja data-whatsapp no botão/links e app.js (const WHATSAPP_NUMBER).
+  - Trocar mensagem padrão do WhatsApp: app.js (const WHATSAPP_MESSAGE_BASE).
+  - Trocar coordenadas do Google Maps: iframe na seção "Local do Desenvolvedor" (atributo src com lat,lng).
+  - Substituir textos e preços: editar conteúdo das seções diretamente neste HTML.
+  - Hospedar: você pode usar GitHub Pages (coloque estes três arquivos em um repositório e ative Pages), Netlify ou Vercel.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrimeWeb Studios — Criação de Sites Profissionais</title>
+  <meta name="description" content="PrimeWeb Studios: agência especializada em sites modernos, responsivos e com SEO. Conheça nossos planos Essencial, Profissional e Premium." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para conteúdo</a>
+
+  <header class="site-header" role="banner" aria-label="Cabeçalho">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Logo">
+        <!-- Salve a imagem enviada como logo.png na raiz do projeto -->
+        <span class="logo-text">PrimeWeb <span>Studios</span></span>
+      </a>
+      <nav class="main-nav" id="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#planos" class="nav-link">Planos</a></li>
+          <li><a href="#modelos" class="nav-link">Modelos</a></li>
+          <li><a href="#local" class="nav-link">Local do Desenvolvedor</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero" aria-label="Seção hero">
+      <canvas id="heroParticles" aria-hidden="true"></canvas>
+      <div class="container hero-inner reveal">
+        <h1 class="hero-title">Seu site profissional, moderno e feito sob medida</h1>
+        <p class="hero-subtitle">A PrimeWeb Studios cria experiências digitais que elevam a sua marca.</p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary btn-lg">Quero criar meu site</a>
+          <a href="#planos" class="btn btn-outline btn-lg">Ver planos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="section" aria-labelledby="planos-title">
+      <div class="container">
+        <h2 id="planos-title">Planos</h2>
+        <p class="section-lead">Todos os sites têm design exclusivo, são responsivos (celular e computador) e feitos sob medida pro seu negócio.</p>
+        <div class="cards">
+          <article class="card plan-card reveal" aria-label="Plano Essencial">
+            <div class="card-header">🔹 Plano Essencial</div>
+            <div class="card-price">R$ 1.499</div>
+            <ul class="card-features">
+              <li>📱 Layout responsivo (mobile/tablet/desktop)</li>
+              <li>🛒 Checkout completo (PIX, cartão e boleto)</li>
+              <li>🎓 Área do aluno com até 10 aulas</li>
+              <li>📲 Integração com WhatsApp e Instagram</li>
+              <li>💾 Hospedagem SSD gratuita por 36 meses</li>
+              <li>⚡ Entrega rápida em até 5 dias úteis</li>
+              <li>🎯 Ideal para presença digital imediata</li>
+              <li>💼 Perfeito para empreendedores iniciantes</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+          </article>
+
+          <article class="card plan-card highlight reveal" aria-label="Plano Profissional">
+            <div class="card-header">🚀 Plano Profissional</div>
+            <div class="card-price">R$ 1.999</div>
+            <ul class="card-features">
+              <li>📄 Até 5 páginas temáticas otimizadas</li>
+              <li>🏷 Páginas para nichos (advocacia, estética, academias, clínicas)</li>
+              <li>🔍 SEO on-page: tags, schema, sitemap e GSC</li>
+              <li>🗺 Google Maps + WhatsApp + formulário inteligente</li>
+              <li>🌐 Domínio .com.br + SSL + hospedagem 3 anos</li>
+              <li>🎨 Layout profissional prototipado no Figma</li>
+              <li>📈 Focado em autoridade e ranqueamento local</li>
+              <li>💼 Ideal para empresas que buscam expansão</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+          </article>
+
+          <article class="card plan-card reveal" aria-label="Plano Premium">
+            <div class="card-header">🌟 Plano Premium</div>
+            <div class="card-price">R$ 2.999</div>
+            <ul class="card-features">
+              <li>🧢 Loja de Smartphones / 🍔 Delivery / 📱 Loja de Celulares</li>
+              <li>📦 Catálogo, cardápio ou specs com automações</li>
+              <li>🛒 Checkout otimizado + carrinho inteligente</li>
+              <li>👤 Área do cliente e controle de estoque</li>
+              <li>🔍 SEO avançado: keywords, snippets e link building</li>
+              <li>🛠 Suporte técnico 12 meses + backups semanais</li>
+              <li>☁ Hospedagem VPS com CDN Cloudflare por 3 anos</li>
+              <li>📊 Relatórios mensais de performance completos</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modelos -->
+    <section id="modelos" class="section" aria-labelledby="modelos-title">
+      <div class="container">
+        <h2 id="modelos-title">MODELOS PARA SEU SITE</h2>
+        <p class="section-lead">Confira nossos modelos de sites profissionais para diversos segmentos</p>
+        <div class="templates-grid">
+          <!-- Loja de Smartphones -->
+          <article class="template-card reveal">
+            <img src="img/smartphone-store-hero.jpg" alt="Modelo de loja de smartphones" />
+            <div class="template-info">
+              <h3>Loja de Smartphones</h3>
+              <p>Layout moderno para e-commerce de celulares com catálogo de produtos, avaliações e sistema de compra.</p>
+              <button class="btn btn-outline open-template" data-template="smartphone">Ver modelo</button>
+            </div>
+          </article>
+
+          <!-- Site de Advocacia -->
+          <article class="template-card reveal">
+            <img src="img/law-office-hero.jpg" alt="Modelo de site de advocacia" />
+            <div class="template-info">
+              <h3>Site de Advocacia</h3>
+              <p>Design profissional e elegante para escritórios de advocacia com áreas de atuação e casos de sucesso.</p>
+              <button class="btn btn-outline open-template" data-template="law">Ver modelo</button>
+            </div>
+          </article>
+
+          <!-- Academia/Fitness -->
+          <article class="template-card reveal">
+            <img src="img/fitness-academy-hero.jpg" alt="Modelo de site de academia" />
+            <div class="template-info">
+              <h3>Academia & Fitness</h3>
+              <p>Site motivador para academias com planos, horários, equipamentos e área de matrícula online.</p>
+              <button class="btn btn-outline open-template" data-template="fitness">Ver modelo</button>
+            </div>
+          </article>
+
+          <!-- Clínica Estética -->
+          <article class="template-card reveal">
+            <img src="img/aesthetic-clinic-hero.jpg" alt="Modelo de clínica estética" />
+            <div class="template-info">
+              <h3>Clínica Estética</h3>
+              <p>Design sofisticado para clínicas de estética com galeria de procedimentos, antes e depois.</p>
+              <button class="btn btn-outline open-template" data-template="aesthetic">Ver modelo</button>
+            </div>
+          </article>
+
+          <!-- Loja de Delivery -->
+          <article class="template-card reveal">
+            <img src="img/delivery-hero.jpg" alt="Modelo de loja de delivery" />
+            <div class="template-info">
+              <h3>Loja de Delivery</h3>
+              <p>Sistema completo para delivery de comida com cardápio digital, carrinho e integração com WhatsApp.</p>
+              <button class="btn btn-outline open-template" data-template="delivery">Ver modelo</button>
+            </div>
+          </article>
+
+          <!-- Loja de Roupas -->
+          <article class="template-card reveal">
+            <img src="img/fashion-store-hero.jpg" alt="Modelo de loja de roupas" />
+            <div class="template-info">
+              <h3>Loja de Roupas</h3>
+              <p>E-commerce fashion com filtros de tamanho, cor, coleções e lookbook para boutiques e confecções.</p>
+              <button class="btn btn-outline open-template" data-template="fashion">Ver modelo</button>
+            </div>
+          </article>
+
+          <!-- Revenda Automotiva -->
+          <article class="template-card reveal">
+            <img src="img/car-dealership-hero.jpg" alt="Modelo de revenda automotiva" />
+            <div class="template-info">
+              <h3>Revenda Automotiva</h3>
+              <p>Showroom virtual para revendas de veículos com fichas técnicas, fotos e formulário de contato.</p>
+              <button class="btn btn-outline open-template" data-template="automotive">Ver modelo</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local do Desenvolvedor -->
+    <section id="local" class="section" aria-labelledby="local-title">
+      <div class="container">
+        <h2 id="local-title">Local do Desenvolvedor</h2>
+        <div class="local-wrapper">
+          <div class="local-map" aria-label="Mapa do local">
+            <!-- Substitua as coordenadas abaixo por suas próprias (lat,lng) -->
+            <iframe title="Mapa do desenvolvedor" src="https://www.google.com/maps?q=Av+Duque+de+Caxias+000+Jaguarão+RS&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="local-info">
+            <p><strong>Endereço:</strong> Av Duque de Caxias 000, Jaguarão/RS - 96300-000</p>
+            <p><strong>Atendimento:</strong> Seg a Sex, 8h às 20h</p>
+            <div class="quick-links">
+              <a id="whatsLink" class="btn btn-primary" href="#" data-whatsapp="5553999666606" rel="noopener">WhatsApp</a>
+              <a class="btn btn-outline" href="https://www.instagram.com/primewebstudios_" target="_blank" rel="noopener">Instagram</a>
+              <a class="btn btn-outline" href="https://mail.google.com/mail/?view=cm&fs=1&to=pfbiel36@gmail.com" target="_blank" rel="noopener" aria-label="Abrir Gmail">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 id="contato-title">Contato</h2>
+        <form id="contactForm" class="contact-form" aria-describedby="form-help">
+          <div id="form-help" class="sr-only">Preencha os campos obrigatórios e envie sua mensagem.</div>
+          <div class="form-group">
+            <label for="servico">Serviço desejado</label>
+            <!-- Transformado em select com os 3 planos -->
+            <select id="servico" name="servico" required>
+              <option value="">Selecione um plano</option>
+              <option value="Plano Essencial - R$  1.499">Plano Essencial - R$ 1.499</option>
+              <option value="Plano Profissional - R$ 1.999">Plano Profissional - R$ 1.999</option>
+              <option value="Plano Premium - R$ 2.999">Plano Premium - R$ 2.999</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos mais sobre seu projeto" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Quero criar meu site</button>
+          </div>
+          <div class="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" aria-label="Rodapé">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> PrimeWeb Studios. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#planos">Planos</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/primewebstudios_" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="#" id="footerWhats" data-whatsapp="5553999666606" aria-label="WhatsApp">WhatsApp</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pfbiel36@gmail.com" target="_blank" rel="noopener" aria-label="Abrir Gmail">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal genérico reutilizável -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal tabindex="-1" aria-hidden="true"></div>
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Fechar" data-close-modal>&times;</button>
+      <h3 id="modal-title">Título do Modal</h3>
+      <div class="modal-body">
+        <!-- Conteúdo injetado via JavaScript -->
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="modal-cta" hidden>Quero este modelo</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+  <!-- Favicon baseado na logo -->
+  <link rel="icon" href="logo.png" type="image/png" />
