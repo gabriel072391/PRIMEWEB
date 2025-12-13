@@ -481,7 +481,7 @@ body::after {
   content: "MAIS POPULAR";
   position: absolute;
   top: 1.5rem;
-  right: -4rem;
+  right: -3.5rem;
   background: linear-gradient(135deg, var(--blue), var(--blue-dark));
   color: #fff;
   padding: 0.5rem 3rem;
