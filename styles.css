@@ -480,8 +480,8 @@ body::after {
 .plan-card.highlight::after {
   content: "MAIS POPULAR";
   position: absolute;
-  top: 1.5rem;
-  right: -3rem;
+  top: 2rem;
+  right: -2rem;
   background: linear-gradient(135deg, var(--blue), var(--blue-dark));
   color: #fff;
   padding: 0.5rem 3rem;
