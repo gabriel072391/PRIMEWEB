@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PrimeWeb Studios: agência especializada em sites modernos, responsivos e com SEO. Conheça nossos planos Essencial, Profissional e Premium.">
+  <title>PrimeWeb Studios — Criação de Sites Profissionais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="container header-content">
+      <a href="#home" class="logo">
+        <span class="logo-text"><span class="text-foreground">PrimeWeb</span> <span class="text-accent">Studios</span></span>
+      </a>
+      
+      <nav class="nav-desktop">
+        <a href="#home">Home</a>
+        <a href="#planos">Planos</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#local">Local</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      
+      <a href="#contato" class="btn btn-primary btn-desktop">Quero criar meu site</a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <nav class="nav-mobile" id="navMobile">
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#planos" onclick="closeMobileMenu()">Planos</a>
+      <a href="#modelos" onclick="closeMobileMenu()">Modelos</a>
+      <a href="#local" onclick="closeMobileMenu()">Local</a>
+      <a href="#contato" onclick="closeMobileMenu()">Contato</a>
+      <a href="#contato" class="btn btn-primary" onclick="closeMobileMenu()">Quero criar meu site</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span>✨</span>
+        <span>Sites profissionais que convertem</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span>Seu site profissional,</span>
+        <span class="gradient-text">moderno e sob medida</span>
+      </h1>
+      
+      <p class="hero-description">
+        A PrimeWeb Studios cria experiências digitais que elevam sua marca e transformam visitantes em clientes.
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="#contato" class="btn btn-primary">
+          Quero criar meu site
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 10h10M15 6l4 4M15 14l4-4"></path>
+          </svg>
+        </a>
+        <a href="#planos" class="btn btn-outline">Ver planos</a>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat stats-item">
+          <div class="stat-value">100+</div>
+          <div class="stat-label">Sites Entregues</div>
+        </div>
+        <div class="stat stats-item">
+          <div class="stat-value">98%</div>
+          <div class="stat-label">Clientes Satisfeitos</div>
+        </div>
+        <div class="stat stats-item">
+          <div class="stat-value">5 dias</div>
+          <div class="stat-label">Entrega Rápida</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans Section -->
+  <section id="planos" class="plans">
+    <div class="container">
+      <div class="section-header scroll-animate">
+        <h2>Nossos <span class="text-accent">Planos</span></h2>
+        <p>Todos os sites têm design exclusivo, são responsivos e feitos sob medida para seu negócio.</p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Plan 1: Essencial -->
+        <div class="plan-card scroll-animate">
+          <div class="plan-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3>Plano Essencial</h3>
+          <div class="plan-price">
+            <span class="currency">R$</span>
+            <span class="amount">1.199</span>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Landing page para conversão</li>
+            <li>✓ Design responsivo e profissional</li>
+            <li>✓ Estrutura otimizada para vendas</li>
+            <li>✓ Checkout integrado na página</li>
+            <li>✓ Pagamento via Pix, cartão e boleto</li>
+            <li>✓ Botão de WhatsApp integrado</li>
+            <li>✓ Página rápida e otimizada</li>
+            <li>✓ SEO básico para melhor visibilidade</li>
+            <li>✓ Integração com ferramentas de análise</li>
+            <li>✓ Entrega em 5 dias</li>
+          </ul>
+          <a href="#contato" class="btn btn-muted">Quero criar meu site</a>
+        </div>
+
+        <!-- Plan 2: Profissional (Popular) -->
+        <div class="plan-card popular scroll-animate">
+          <div class="plan-badge">MAIS POPULAR</div>
+          <div class="plan-icon" style="background: linear-gradient(135deg, #2196F3 0%, #5CEAFF 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <h3>Plano Profissional</h3>
+          <div class="plan-price">
+            <span class="currency">R$</span>
+            <span class="amount">1.699</span>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Até 80 produtos</li>
+            <li>✓ 6 categorias</li>
+            <li>✓ Design premium + identidade visual</li>
+            <li>✓ WhatsApp + Instagram Shop</li>
+            <li>✓ Checkout otimizado</li>
+            <li>✓ Pix, Boleto e Crédito</li>
+            <li>✓ Correios + Melhor Envio</li>
+            <li>✓ SEO técnico</li>
+            <li>✓ Até 5 apps integrados</li>
+            <li>✓ Sobre + Contato + Políticas</li>
+            <li>✓ Vídeo + checklist de treinamento</li>
+            <li>✓ Suporte 15 dias</li>
+            <li>✓ Entrega em 7 dias</li>
+          </ul>
+          <a href="#contato" class="btn btn-primary">Quero criar meu site</a>
+        </div>
+
+        <!-- Plan 3: Premium -->
+        <div class="plan-card scroll-animate">
+          <div class="plan-icon" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <h3>Plano Premium</h3>
+          <div class="plan-price">
+            <span class="currency">R$</span>
+            <span class="amount">2.999</span>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Até 200 produtos</li>
+            <li>✓ Categorias ilimitadas</li>
+            <li>✓ Design premium + identidade visual</li>
+            <li>✓ WhatsApp + Instagram + Pixel + GA</li>
+            <li>✓ Checkout com recuperação de carrinho</li>
+            <li>✓ Pagamentos completos + testes</li>
+            <li>✓ Frete avançado personalizado</li>
+            <li>✓ SEO avançado + velocidade</li>
+            <li>✓ Páginas institucionais completas</li>
+            <li>✓ Treinamento completo</li>
+            <li>✓ Suporte 30 dias prioritário</li>
+            <li>✓ Entrega em 10 dias</li>
+          </ul>
+          <a href="#contato" class="btn btn-muted">Quero criar meu site</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Templates Section -->
+  <section id="modelos" class="templates">
+    <div class="container">
+      <div class="section-header">
+        <h2>Modelos para seu <span class="text-accent">Site</span></h2>
+        <p>Confira nossos modelos de sites profissionais para diversos segmentos</p>
+      </div>
+
+      <div class="templates-grid">
+        <div class="template-card" data-template="smartphone">
+          <div class="template-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+          </div>
+          <h3>Loja de Smartphones</h3>
+          <p>Layout moderno para e-commerce de celulares com catálogo de produtos, avaliações e sistema de compra.</p>
+          <button class="btn btn-outline btn-view-template" onclick="openModal('smartphone')">Ver modelo</button>
+        </div>
+
+        <div class="template-card scroll-animate" data-template="law">
+          <div class="template-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+          <h3>Site de Advocacia</h3>
+          <p>Design profissional e elegante para escritórios de advocacia com áreas de atuação e casos de sucesso.</p>
+          <button class="btn btn-outline btn-view-template" onclick="openModal('law')">Ver modelo</button>
+        </div>
+
+        <div class="template-card scroll-animate" data-template="fitness">
+          <div class="template-icon" style="background: linear-gradient(135deg, #ef4444 0%, #ec4899 100%);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M6 4h12M6 4v3M18 4v3M6 10h12M6 10v3M18 10v3"></path></svg>
+          </div>
+          <h3>Academia & Fitness</h3>
+          <p>Site motivador para academias com planos, horários, equipamentos e área de matrícula online.</p>
+          <button class="btn btn-outline btn-view-template" onclick="openModal('fitness')">Ver modelo</button>
+        </div>
+
+        <div class="template-card scroll-animate" data-template="delivery">
+          <div class="template-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zm-7-5h6"></path></svg>
+          </div>
+          <h3>Loja de Delivery</h3>
+          <p>Sistema completo para delivery de comida com cardápio digital, carrinho e integração com WhatsApp.</p>
+          <button class="btn btn-outline btn-view-template" onclick="openModal('delivery')">Ver modelo</button>
+        </div>
+
+        <div class="template-card scroll-animate" data-template="fashion">
+          <div class="template-icon" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M6 4h12l-1.5 6H7.5L6 4zM9 10v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-6"></path></svg>
+          </div>
+          <h3>Loja de Roupas</h3>
+          <p>E-commerce fashion com filtros de tamanho, cor, coleções e lookbook para boutiques e confecções.</p>
+          <button class="btn btn-outline btn-view-template" onclick="openModal('fashion')">Ver modelo</button>
+        </div>
+
+        <div class="template-card scroll-animate" data-template="car">
+          <div class="template-icon" style="background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 17H17M1 14L3 6H21L23 14M7 14H17V18a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V14Z"></path></svg>
+          </div>
+          <h3>Revenda Automotiva</h3>
+          <p>Showroom virtual para revendas de veículos com fichas técnicas, fotos e formulário de contato.</p>
+          <button class="btn btn-outline btn-view-template" onclick="openModal('car')">Ver modelo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para Templates -->
+  <div id="templateModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Template</h2>
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img id="modalImage" src="" alt="Template" class="modal-image">
+          <button class="modal-nav modal-prev" id="prevBtn" onclick="prevImage()" style="display:none;">‹</button>
+          <button class="modal-nav modal-next" id="nextBtn" onclick="nextImage()" style="display:none;">›</button>
+        </div>
+        <div class="modal-footer">
+          <p id="imageInfo"></p>
+          <div id="imageDots" class="image-dots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location Section -->
+  <section id="local" class="location">
+    <div class="container">
+      <div class="section-header">
+        <h2>Local do <span class="text-accent">Desenvolvedor</span></h2>
+      </div>
+
+      <div class="location-content">
+        <div class="location-map">
+          <iframe
+            title="Mapa do desenvolvedor"
+            src="https://www.google.com/maps?q=Av+Duque+de+Caxias+000+Jaguarão+RS&output=embed"
+            width="100%"
+            height="400"
+            style="border:0; border-radius:12px;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="location-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <h3>Endereço</h3>
+              <p>Av Duque de Caxias 000, Jaguarão/RS - 96300-000</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🕐</div>
+            <div>
+              <h3>Atendimento</h3>
+              <p>Segunda a Sexta, 8h às 20h</p>
+            </div>
+          </div>
+
+          <div class="info-divider"></div>
+
+          <div>
+            <h3>Entre em contato</h3>
+            <div class="contact-buttons">
+              <a href="https://wa.me/5553999666606?text=Olá!%20Gostaria%20de%20criar%20meu%20site%20com%20a%20PrimeWeb%20Studios." target="_blank" class="btn btn-primary">
+                💬 WhatsApp
+              </a>
+              <a href="https://www.instagram.com/primewebstudios_" target="_blank" class="btn btn-outline">
+                📸 Instagram
+              </a>
+              <a href="mailto:pfbiel36@gmail.com" class="btn btn-outline">
+                ✉️ Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Entre em <span class="text-accent">Contato</span></h2>
+        <p>Preencha o formulário abaixo e entraremos em contato pelo WhatsApp</p>
+      </div>
+
+      <form class="contact-form" onsubmit="handleContactSubmit(event)">
+        <div class="form-group">
+          <label for="service">Serviço desejado</label>
+          <select id="service" required>
+            <option value="">Selecione um plano</option>
+            <option value="Plano Essencial - R$ 1.199">Plano Essencial - R$ 1.199</option>
+            <option value="Plano Profissional - R$ 1.699">Plano Profissional - R$ 1.699</option>
+            <option value="Plano Premium - R$ 2.999">Plano Premium - R$ 2.999</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Qual o ramo do seu site?</label>
+          <textarea id="message" placeholder="Conte-nos mais sobre seu projeto..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          ➤ Quero criar meu site
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-text"><span class="text-foreground">PrimeWeb</span> <span class="text-accent">Studios</span></span>
+          </a>
+          <p id="copyright"></p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="#planos">Planos</a>
+          <a href="#modelos">Modelos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="footer-social">
+          <a href="https://wa.me/5553999666606" target="_blank" aria-label="WhatsApp">💬</a>
+          <a href="https://www.instagram.com/primewebstudios_" target="_blank" aria-label="Instagram">📸</a>
+          <a href="mailto:pfbiel36@gmail.com" aria-label="Email">✉️</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
